@@ -1,0 +1,10 @@
+<div class="pokemon">
+  <div class="pokemon-top"><p><img
+    [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+pokemon.id+'.png'"
+    alt=""> {{ pokemon.name }}</p>
+    <div class="types">
+      <div [class]="pokemon.types[0].name + ' type'">{{pokemon.types[0].name}}</div>
+      <div [class]="pokemon.types[1].name + ' type'" *ngIf="pokemon.types.length > 1">{{pokemon.types[1].name}}</div>
+    </div>
+  </div>
+</div>
